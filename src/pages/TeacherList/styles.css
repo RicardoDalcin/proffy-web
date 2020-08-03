@@ -35,8 +35,8 @@
   font: 1.6rem Archivo;
 }
 
-#search-teachers .input-block:focus-within::after {
-  width: calc(100% - 3.2rem);
+#search-teachers .input-block::after {
+  width: 0rem;
   height: 2px;
   content: '';
   background: var(--color-primary-light);
@@ -44,6 +44,11 @@
   left: 1.6rem;
   right: 1.6rem;
   bottom: 0;
+  transition: width 0.2s;
+}
+
+#search-teachers .input-block:focus-within::after {
+  width: calc(100% - 3.2rem);
 }
 
 #page-teacher-list main {
